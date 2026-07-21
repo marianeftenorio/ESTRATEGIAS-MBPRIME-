@@ -15,41 +15,39 @@ body {
     padding: 0;
 }
 
-/* Global Logo */
-.global-logo {
-    position: absolute;
-    top: 30px;
-    left: 40px;
-    z-index: 1000;
-    opacity: 0.8;
-}
-
-.global-logo img {
-    height: 40px;
-    width: auto;
-}
-
 /* Base Reveal Overrides */
+.reveal .slides {
+    text-align: left;
+}
+
 .reveal h1, .reveal h2, .reveal h3 {
     font-family: 'Inter', sans-serif;
     text-transform: none;
     font-weight: 300;
     letter-spacing: -0.5px;
     color: var(--text-primary);
+    margin: 0 0 20px 0 !important;
 }
 
 .reveal p, .reveal li, .reveal span {
     font-family: 'Inter', sans-serif;
     font-weight: 300;
-    line-height: 1.6;
+    line-height: 1.4;
     color: var(--text-muted);
 }
 
 .section-title {
-    font-size: 2.2em !important;
-    margin-bottom: 60px !important;
+    font-size: 2em !important;
+    margin-bottom: 30px !important;
     font-weight: 200 !important;
     text-align: left;
+}
+
+/* Global Logo inside Slides to scale with them */
+.slide-logo {
+    height: 35px;
+    margin-bottom: 20px !important;
+    opacity: 0.8;
 }
 
 /* Capa */
@@ -57,36 +55,37 @@ body {
     text-align: left;
 }
 .main-logo {
-    height: 80px;
-    margin-bottom: 60px !important;
+    height: 60px;
+    margin-bottom: 40px !important;
     display: block;
 }
 .spacer {
-    height: 60px;
+    height: 20px;
 }
 .slide-capa .title {
-    font-size: 3em;
+    font-size: 2.8em;
     font-weight: 300;
     line-height: 1.1;
-    margin-bottom: 20px;
+    margin-bottom: 15px !important;
     max-width: 800px;
 }
 .slide-capa .subtitle {
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: var(--accent);
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 400;
 }
 .footer-info {
-    margin-top: 80px;
+    margin-top: 40px;
     border-top: 1px solid var(--line-color);
-    padding-top: 20px;
+    padding-top: 15px;
 }
 .footer-info p {
     font-size: 0.8em;
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin: 0;
 }
 .footer-info span {
     color: var(--text-primary);
@@ -97,7 +96,7 @@ body {
 .minimal-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 20px;
     text-align: left;
 }
 .minimal-grid.two-cols {
@@ -109,25 +108,26 @@ body {
 
 .minimal-item {
     border-top: 1px solid var(--line-color);
-    padding-top: 20px;
+    padding-top: 15px;
 }
 
 .minimal-item .number {
     display: block;
     font-size: 0.8em;
     color: var(--accent);
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     font-weight: 500;
 }
 
 .minimal-item h3 {
-    font-size: 1.2em !important;
-    margin-bottom: 15px !important;
+    font-size: 1.1em !important;
+    margin-bottom: 10px !important;
     font-weight: 400;
 }
 
 .minimal-item p {
-    font-size: 0.9em;
+    font-size: 0.85em;
+    margin: 0;
 }
 
 /* Focus Content (Centered list/statement) */
@@ -140,9 +140,9 @@ body {
     text-align: left;
 }
 .focus-content .statement {
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: var(--text-primary);
-    margin-bottom: 40px;
+    margin-bottom: 25px;
     font-weight: 300;
 }
 
@@ -150,11 +150,13 @@ body {
     list-style: none;
     padding: 0;
     text-align: left;
+    margin: 0;
 }
 .minimal-list li {
-    font-size: 1.1em;
-    padding: 15px 0;
+    font-size: 1em;
+    padding: 12px 0;
     border-bottom: 1px solid var(--line-color);
+    margin: 0;
 }
 .minimal-list li:last-child {
     border-bottom: none;
@@ -167,7 +169,7 @@ body {
 /* Pillars */
 .pillar-label {
     text-align: left;
-    font-size: 0.8em;
+    font-size: 0.7em;
     color: var(--accent);
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -178,7 +180,7 @@ body {
 .split-layout {
     display: flex;
     justify-content: space-between;
-    gap: 60px;
+    gap: 30px;
     text-align: left;
 }
 .split-col {
@@ -186,62 +188,62 @@ body {
 }
 .split-col.border-right {
     border-right: 1px solid var(--line-color);
-    padding-right: 60px;
+    padding-right: 30px;
 }
 .split-col h3 {
-    font-size: 1.5em !important;
-    margin-bottom: 10px !important;
+    font-size: 1.3em !important;
+    margin-bottom: 5px !important;
 }
 .badge {
     display: inline-block;
-    padding: 4px 10px;
+    padding: 3px 8px;
     border: 1px solid var(--accent);
     color: var(--accent);
-    font-size: 0.7em;
+    font-size: 0.6em;
     border-radius: 4px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 
 /* Blocks */
 .block {
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 }
 .block h3 {
-    font-size: 1.3em !important;
-    margin-bottom: 10px !important;
+    font-size: 1.2em !important;
+    margin-bottom: 5px !important;
 }
 
 /* Commercial */
 .commercial-block {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid var(--line-color);
-    padding: 40px;
+    padding: 25px;
     border-radius: 4px;
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 .commercial-block.transparent {
     background: transparent;
     border-style: dashed;
 }
 .commercial-block h3 {
-    font-size: 1.2em !important;
+    font-size: 1.1em !important;
     margin-bottom: 5px !important;
     color: var(--text-primary);
 }
 .muted {
-    font-size: 0.85em;
-    margin-bottom: 20px !important;
+    font-size: 0.8em;
+    margin-bottom: 15px !important;
 }
 .value-box {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 8px 15px;
     background: var(--accent);
     color: #000;
     font-weight: 500;
-    font-size: 0.9em;
+    font-size: 0.85em;
     border-radius: 3px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -249,10 +251,11 @@ body {
 .clean-list {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 .clean-list li {
-    font-size: 0.9em;
-    margin-bottom: 10px;
+    font-size: 0.85em;
+    margin-bottom: 8px;
     padding-left: 15px;
     position: relative;
 }
@@ -260,7 +263,7 @@ body {
     content: '';
     position: absolute;
     left: 0;
-    top: 10px;
+    top: 8px;
     width: 4px;
     height: 4px;
     background: var(--accent);
@@ -271,7 +274,7 @@ body {
 .timeline {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     text-align: left;
     max-width: 600px;
     margin: 0 auto;
@@ -279,17 +282,17 @@ body {
 .t-item {
     display: flex;
     align-items: center;
-    padding: 15px 0;
+    padding: 10px 0;
     border-bottom: 1px solid var(--line-color);
 }
 .t-num {
-    font-size: 0.9em;
+    font-size: 0.85em;
     color: var(--accent);
-    margin-right: 30px;
+    margin-right: 20px;
     font-family: monospace;
 }
 .t-item span:not(.t-num) {
-    font-size: 1.1em;
+    font-size: 1em;
     color: var(--text-primary);
 }
 .t-item.highlight {
@@ -303,107 +306,14 @@ body {
 .reveal .controls { color: var(--accent); }
 .reveal .progress { color: var(--accent); }
 
-/* Desktop Enhancements (Large Screens) */
-@media screen and (min-width: 1024px) {
-    .section-title {
-        font-size: 2.6em !important;
-        margin-bottom: 70px !important;
-    }
-    
-    .slide-capa .title {
-        font-size: 3.5em;
-        line-height: 1.2;
-    }
-    
-    .slide-capa .subtitle {
-        font-size: 1.4em;
-    }
-    
-    .minimal-grid {
-        gap: 60px;
-    }
-    
-    .focus-content .statement {
-        font-size: 1.8em;
-    }
-    
-    .split-layout {
-        gap: 100px;
-    }
-    
-    .global-logo {
-        top: 40px;
-        left: 60px;
-    }
-    
-    .global-logo img {
-        height: 50px;
-    }
-}
+/* Global overrides for tighter text spacing */
+.reveal p { margin-bottom: 15px !important; }
 
-/* Mobile Responsiveness */
+/* Responsive tweaks */
 @media screen and (max-width: 768px) {
-    .section-title {
-        font-size: 1.6em !important;
-        margin-bottom: 30px !important;
-    }
-    
-    .slide-capa .title {
-        font-size: 1.8em;
-    }
-    
-    .slide-capa .subtitle {
-        font-size: 1em;
-    }
-    
-    .main-logo {
-        height: 60px;
-        margin-bottom: 40px !important;
-    }
-    
-    .global-logo {
-        top: 15px;
-        left: 20px;
-    }
-    
-    .global-logo img {
-        height: 25px;
-    }
-
-    .minimal-grid, .minimal-grid.two-cols {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .split-layout {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .split-col.border-right {
-        border-right: none;
-        border-bottom: 1px solid var(--line-color);
-        padding-right: 0;
-        padding-bottom: 30px;
-    }
-
-    .minimal-list li {
-        font-size: 0.95em;
-    }
-    
-    .focus-content .statement {
-        font-size: 1.2em;
-    }
-
-    .commercial-block {
-        padding: 20px;
-    }
-    
-    .t-item span:not(.t-num) {
-        font-size: 0.9em;
-    }
-    
-    .reveal p, .reveal li {
-        font-size: 0.9em;
-    }
+    .minimal-grid, .minimal-grid.two-cols { grid-template-columns: 1fr; }
+    .split-layout { flex-direction: column; gap: 20px; }
+    .split-col.border-right { border-right: none; padding-right: 0; border-bottom: 1px solid var(--line-color); padding-bottom: 20px; }
+    .slide-capa .title { font-size: 2em; }
+    .section-title { font-size: 1.6em !important; margin-bottom: 20px !important; }
 }
