@@ -303,6 +303,44 @@ body {
 .reveal .controls { color: var(--accent); }
 .reveal .progress { color: var(--accent); }
 
+/* Desktop Enhancements (Large Screens) */
+@media screen and (min-width: 1024px) {
+    .section-title {
+        font-size: 2.6em !important;
+        margin-bottom: 70px !important;
+    }
+    
+    .slide-capa .title {
+        font-size: 3.5em;
+        line-height: 1.2;
+    }
+    
+    .slide-capa .subtitle {
+        font-size: 1.4em;
+    }
+    
+    .minimal-grid {
+        gap: 60px;
+    }
+    
+    .focus-content .statement {
+        font-size: 1.8em;
+    }
+    
+    .split-layout {
+        gap: 100px;
+    }
+    
+    .global-logo {
+        top: 40px;
+        left: 60px;
+    }
+    
+    .global-logo img {
+        height: 50px;
+    }
+}
+
 /* Mobile Responsiveness */
 @media screen and (max-width: 768px) {
     .section-title {
