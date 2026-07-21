@@ -302,3 +302,70 @@ body {
 /* Reveal Controls Overrides */
 .reveal .controls { color: var(--accent); }
 .reveal .progress { color: var(--accent); }
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .section-title {
+        font-size: 1.6em !important;
+        margin-bottom: 30px !important;
+    }
+    
+    .slide-capa .title {
+        font-size: 1.8em;
+    }
+    
+    .slide-capa .subtitle {
+        font-size: 1em;
+    }
+    
+    .main-logo {
+        height: 60px;
+        margin-bottom: 40px !important;
+    }
+    
+    .global-logo {
+        top: 15px;
+        left: 20px;
+    }
+    
+    .global-logo img {
+        height: 25px;
+    }
+
+    .minimal-grid, .minimal-grid.two-cols {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .split-layout {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .split-col.border-right {
+        border-right: none;
+        border-bottom: 1px solid var(--line-color);
+        padding-right: 0;
+        padding-bottom: 30px;
+    }
+
+    .minimal-list li {
+        font-size: 0.95em;
+    }
+    
+    .focus-content .statement {
+        font-size: 1.2em;
+    }
+
+    .commercial-block {
+        padding: 20px;
+    }
+    
+    .t-item span:not(.t-num) {
+        font-size: 0.9em;
+    }
+    
+    .reveal p, .reveal li {
+        font-size: 0.9em;
+    }
+}
