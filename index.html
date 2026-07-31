@@ -280,6 +280,32 @@
             letter-spacing: 1px;
         }
 
+        .mobile-scroll-controls {
+            display: none;
+            position: fixed;
+            bottom: 5rem;
+            right: 1.5rem;
+            z-index: 100;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .btn-scroll {
+            background: rgba(191, 161, 95, 0.8); /* Dourado */
+            border: 1px solid rgba(255,255,255,0.3);
+            color: var(--primary);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+
         @media (max-width: 1024px) {
             .grid-4 { grid-template-columns: repeat(2, 1fr); }
             .title { font-size: 2.8rem; }
@@ -296,6 +322,7 @@
             .controls { bottom: 1.5rem; right: 1rem; }
             .slide-logo { left: 50%; transform: translateX(-50%); top: 1rem; max-width: 90px; }
             .slide-number { bottom: 1.5rem; left: 1rem; }
+            .mobile-scroll-controls { display: flex; } /* Ativar botões de rolagem */
         }
     </style>
 </head>
@@ -729,6 +756,12 @@
         <button class="btn-nav" id="next" title="Próximo">❯</button>
     </div>
 
+    <!-- Scroll controls (Mobile only) -->
+    <div class="mobile-scroll-controls">
+        <button class="btn-scroll" id="scrollUp" title="Subir Conteúdo">▲</button>
+        <button class="btn-scroll" id="scrollDown" title="Descer Conteúdo">▼</button>
+    </div>
+
     <div class="progress-container">
         <div class="progress-bar" id="progress"></div>
     </div>
@@ -794,6 +827,20 @@
 
         // Initial setup
         updateSlides();
+
+        // Mobile Scroll Buttons Logic
+        const scrollUpBtn = document.getElementById('scrollUp');
+        const scrollDownBtn = document.getElementById('scrollDown');
+
+        scrollUpBtn.addEventListener('click', () => {
+            const activeSlide = slides[currentSlide];
+            activeSlide.scrollBy({ top: -150, behavior: 'smooth' });
+        });
+
+        scrollDownBtn.addEventListener('click', () => {
+            const activeSlide = slides[currentSlide];
+            activeSlide.scrollBy({ top: 150, behavior: 'smooth' });
+        });
     </script>
 </body>
 </html>
