@@ -283,27 +283,29 @@
         .mobile-scroll-controls {
             display: none;
             position: fixed;
-            bottom: 5rem;
-            right: 1.5rem;
+            bottom: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
             z-index: 100;
-            flex-direction: column;
-            gap: 0.5rem;
+            flex-direction: row;
+            gap: 1rem;
         }
 
         .btn-scroll {
-            background: rgba(191, 161, 95, 0.8); /* Dourado */
-            border: 1px solid rgba(255,255,255,0.3);
-            color: var(--primary);
-            width: 40px;
-            height: 40px;
+            background: rgba(10, 25, 47, 0.8);
+            border: 1px solid rgba(191, 161, 95, 0.5); /* Borda sutil dourada */
+            color: var(--secondary);
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             cursor: pointer;
-            font-size: 1rem;
+            font-size: 1.2rem;
+            font-weight: bold;
             display: flex;
             justify-content: center;
             align-items: center;
             backdrop-filter: blur(5px);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
         }
 
         @media (max-width: 1024px) {
@@ -766,8 +768,8 @@
 
     <!-- Scroll controls (Mobile only) -->
     <div class="mobile-scroll-controls">
-        <button class="btn-scroll" id="scrollUp" title="Subir Conteúdo">▲</button>
-        <button class="btn-scroll" id="scrollDown" title="Descer Conteúdo">▼</button>
+        <button class="btn-scroll" id="scrollUp" title="Subir Conteúdo">↑</button>
+        <button class="btn-scroll" id="scrollDown" title="Descer Conteúdo">↓</button>
     </div>
 
     <div class="progress-container">
