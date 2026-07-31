@@ -280,34 +280,6 @@
             letter-spacing: 1px;
         }
 
-        .mobile-scroll-controls {
-            display: none;
-            position: fixed;
-            bottom: 1.5rem;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 100;
-            flex-direction: row;
-            gap: 1rem;
-        }
-
-        .btn-scroll {
-            background: rgba(10, 25, 47, 0.8);
-            border: 1px solid rgba(191, 161, 95, 0.5); /* Borda sutil dourada */
-            color: var(--secondary);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 1.2rem;
-            font-weight: bold;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            backdrop-filter: blur(5px);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-        }
-
         @media (max-width: 1024px) {
             .grid-4 { grid-template-columns: repeat(2, 1fr); }
             .title { font-size: 2.8rem; }
@@ -329,12 +301,10 @@
             }
             .title { font-size: 2.2rem; margin-top: 2rem; }
             .section-title { font-size: 1.8rem; margin-bottom: 2rem; margin-top: 3rem; }
-            .controls { bottom: 1.5rem; right: 1rem; }
+            .controls { bottom: 1.5rem; right: 1rem; gap: 0.5rem; }
             .slide-logo { left: 50%; transform: translateX(-50%); top: 1rem; max-width: 90px; }
             .slide-number { bottom: 1.5rem; left: 1rem; padding: 0.5rem; font-size: 0.9rem; }
-            .mobile-scroll-controls { display: flex; gap: 0.5rem; }
-            .controls { gap: 0.5rem; }
-            .btn-scroll, .btn-nav {
+            .btn-nav {
                 width: 40px;
                 height: 40px;
                 font-size: 1rem;
@@ -772,12 +742,6 @@
         <button class="btn-nav" id="next" title="Próximo">❯</button>
     </div>
 
-    <!-- Scroll controls (Mobile only) -->
-    <div class="mobile-scroll-controls">
-        <button class="btn-scroll" id="scrollUp" title="Subir Conteúdo">↑</button>
-        <button class="btn-scroll" id="scrollDown" title="Descer Conteúdo">↓</button>
-    </div>
-
     <div class="progress-container">
         <div class="progress-bar" id="progress"></div>
     </div>
@@ -843,20 +807,6 @@
 
         // Initial setup
         updateSlides();
-
-        // Mobile Scroll Buttons Logic
-        const scrollUpBtn = document.getElementById('scrollUp');
-        const scrollDownBtn = document.getElementById('scrollDown');
-
-        scrollUpBtn.addEventListener('click', () => {
-            const activeSlide = slides[currentSlide];
-            activeSlide.scrollBy({ top: -150, behavior: 'smooth' });
-        });
-
-        scrollDownBtn.addEventListener('click', () => {
-            const activeSlide = slides[currentSlide];
-            activeSlide.scrollBy({ top: 150, behavior: 'smooth' });
-        });
     </script>
 </body>
 </html>
