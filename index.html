@@ -314,8 +314,16 @@
         @media (max-width: 768px) {
             .grid-2, .grid-4 { grid-template-columns: 1fr; }
             .slide { 
-                padding: 6rem 5% 8rem 5%; 
+                padding: 6rem 5% 10rem 5%; 
                 justify-content: flex-start;
+            }
+            /* Margem invisível extra no final para garantir que nenhum navegador corte o texto */
+            .slide::after {
+                content: "";
+                display: block;
+                flex-shrink: 0;
+                height: 150px;
+                width: 100%;
             }
             .title { font-size: 2.2rem; margin-top: 2rem; }
             .section-title { font-size: 1.8rem; margin-bottom: 2rem; margin-top: 3rem; }
