@@ -120,6 +120,14 @@
             max-width: 1200px;
         }
 
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            width: 100%;
+            max-width: 1200px;
+        }
+
         .grid-4 {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -281,12 +289,12 @@
         }
 
         @media (max-width: 1024px) {
-            .grid-4 { grid-template-columns: repeat(2, 1fr); }
+            .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
             .title { font-size: 2.8rem; }
         }
 
         @media (max-width: 768px) {
-            .grid-2, .grid-4 { grid-template-columns: 1fr; }
+            .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
             .slide { 
                 padding: 6rem 5% 10rem 5%; 
                 justify-content: flex-start;
@@ -612,7 +620,52 @@
             </div>
         </div>
 
-        <!-- Slide 13: Plano de Ação Final -->
+        <!-- Novo Slide 13: O Perigo do Google Ads Amplo -->
+        <div class="slide">
+            <img src="https://mbprimesaude.com/wp-content/uploads/2026/04/LOGO-BRANCA-e1775430565211.png" alt="MB Prime Logo" class="slide-logo">
+            <h2 class="section-title">A Armadilha da Correspondência Ampla</h2>
+            
+            <div class="grid-2">
+                <div class="card">
+                    <span class="badge" style="background: rgba(239, 68, 68, 0.2); color: #ef4444;">1. O Perigo Amplo</span>
+                    <h3>Rasgando Dinheiro</h3>
+                    <p>O Google quer gastar orçamento. Se a palavra-chave fica "solta", ele exibe o anúncio para quem busca "SUS", "vasectomia gratuita" ou "chá de quiabo para próstata". O clique é pago, o paciente descobre que a clínica é High Ticket e vai embora frustrado.</p>
+                </div>
+                <div class="card">
+                    <span class="badge" style="background: rgba(239, 68, 68, 0.2); color: #ef4444;">2. Limite Geográfico</span>
+                    <h3>A Geolocalização Não Basta</h3>
+                    <p>Restringir a campanha para Maceió é obrigatório, mas <strong>não qualifica o bolso do paciente</strong>. A geolocalização blinda o lugar, mas não blinda a intenção de compra. O paciente do SUS de Maceió ainda verá o anúncio se a palavra for ampla.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Novo Slide 14: A Tríade de Proteção -->
+        <div class="slide">
+            <img src="https://mbprimesaude.com/wp-content/uploads/2026/04/LOGO-BRANCA-e1775430565211.png" alt="MB Prime Logo" class="slide-logo">
+            <h2 class="section-title">O Modelo Ideal: A Tríade de Proteção</h2>
+            
+            <div class="grid-3">
+                <div class="card list-card" style="border-color: var(--secondary);">
+                    <h3 style="color: var(--secondary); margin-bottom: 0;">1. Barreira Geográfica</h3>
+                    <p style="margin-top: 1rem;">Anúncio restrito apenas a Maceió (foco em Jatiúca, Ponta Verde) e, de forma estratégica, cidades vizinhas polos com altíssimo poder aquisitivo.</p>
+                </div>
+                <div class="card list-card" style="border-color: var(--secondary);">
+                    <h3 style="color: var(--secondary); margin-bottom: 0;">2. Travar o Algoritmo</h3>
+                    <p style="margin-top: 1rem;">Sair da Correspondência Ampla. Usar <strong>Frase</strong> (<em>"urologista em maceió"</em>) ou <strong>Exata</strong> (<em>[médico urologista maceió]</em>). Isso força o Google a respeitar a intenção.</p>
+                </div>
+                <div class="card list-card" style="border-color: var(--secondary);">
+                    <h3 style="color: var(--secondary); margin-bottom: 0;">3. A Muralha Negativa</h3>
+                    <p style="margin-top: 1rem;">Negativar ativamente termos que sangram o orçamento: SUS, gratuito, posto, hapvida, unimed, bradesco, sulamerica, preço, barato, receita, chá, caseiro, remédio.</p>
+                </div>
+            </div>
+            
+            <div class="highlight-box" style="margin-top: 2rem;">
+                <h3>O Resumo Estratégico</h3>
+                <p>O Dr. Mauro tem posicionamento <strong>High Ticket</strong>. Precisamos fechar o cerco. Cliques desqualificados consomem a verba que deveria captar os pacientes Premium para Robótica e Rezūm.</p>
+            </div>
+        </div>
+
+        <!-- Slide 15: Plano de Ação Final -->
         <div class="slide">
             <img src="https://mbprimesaude.com/wp-content/uploads/2026/04/LOGO-BRANCA-e1775430565211.png" alt="MB Prime Logo" class="slide-logo">
             <h2 class="section-title">Plano de Ação Imediato</h2>
