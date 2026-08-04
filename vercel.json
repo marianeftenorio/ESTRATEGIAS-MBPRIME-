@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/",
       "has": [
         {
           "type": "host",
@@ -11,7 +11,7 @@
       "destination": "/apresentacao_antiga.html"
     },
     {
-      "source": "/(.*)",
+      "source": "/",
       "has": [
         {
           "type": "host",
