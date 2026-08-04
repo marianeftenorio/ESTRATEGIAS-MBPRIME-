@@ -1,0 +1,24 @@
+{
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "mb-prime-phi.vercel.app"
+        }
+      ],
+      "destination": "/apresentacao_antiga.html"
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "estrategias-mbprime.vercel.app"
+        }
+      ],
+      "destination": "/apresentacao_diagnostico.html"
+    }
+  ]
+}
